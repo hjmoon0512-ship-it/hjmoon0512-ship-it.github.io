@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activities - IIML</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body { margin: 0; background: var(--bg-dark); color: var(--text-light); line-height: 1.6; }
+        
+        /* 타임라인 영역 */
+        .timeline-container { max-width: 900px; margin: 0 auto; padding: 2rem 0 4rem 2rem; }
+        .timeline { position: relative; border-left: 2px solid rgba(255, 255, 255, 0.1); padding-left: 3rem; }
+        .timeline-item { position: relative; margin-bottom: 3.5rem; }
+        .timeline-item::before {
+            content: ''; position: absolute; left: -3.6rem; top: 0.2rem;
+            width: 1.1rem; height: 1.1rem; background: var(--primary-color);
+            border: 3px solid var(--bg-dark); border-radius: 50%; box-shadow: 0 0 12px var(--primary-color);
+        }
+        .timeline-date { font-size: 1.3rem; color: var(--primary-color); font-weight: 800; margin-bottom: 1rem; letter-spacing: 1px; }
+
+        .timeline-card {
+            background: rgba(255, 255, 255, 0.02); padding: 2.5rem; border-radius: 16px;
+            border: 1px solid rgba(255, 255, 255, 0.05); transition: all 0.3s ease;
+        }
+        .timeline-card:hover {
+            transform: translateX(10px) translateY(-5px); background: rgba(255, 255, 255, 0.04);
+            border-color: rgba(79, 70, 229, 0.5); box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+        .timeline-card h3 { font-size: 1.3rem; color: #fff; margin-bottom: 0.8rem; line-height: 1.4; }
+        .timeline-card p { color: var(--text-gray); font-size: 0.95rem; line-height: 1.7; }
+
+        /* 카테고리 태그 */
+        .tag { display: inline-block; padding: 0.3rem 0.8rem; font-size: 0.8rem; font-weight: bold; border-radius: 6px; margin-right: 0.5rem; margin-bottom: 1rem; }
+        .tag-blue { background: rgba(79, 70, 229, 0.15); color: #818cf8; }
+        .tag-purple { background: rgba(147, 51, 234, 0.15); color: #c084fc; }
+        .tag-gold { background: rgba(234, 179, 8, 0.15); color: #fde047; }
+        .tag-gray { background: rgba(255, 255, 255, 0.05); color: #cbd5e1; }
+
+        /* 학회 및 외부 활동 그리드 영역 */
+        .activity-grid { max-width: 900px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; padding: 0 0 5rem 0; }
+        .info-card { background: rgba(255, 255, 255, 0.02); padding: 2rem; border-radius: 16px; border: 1px solid rgba(255, 255, 255, 0.05); }
+        .info-card h3 { color: var(--primary-color); font-size: 1.2rem; margin-bottom: 1.5rem; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 0.8rem; }
+        .info-card ul { list-style: none; color: var(--text-gray); font-size: 0.95rem; }
+        .info-card ul li { margin-bottom: 0.8rem; display: flex; align-items: flex-start; }
+        .info-card ul li::before { content: '▪'; color: var(--primary-color); margin-right: 0.5rem; }
+
+        @media (max-width: 768px) {
+            .timeline { padding-left: 2rem; }
+            .timeline-item::before { left: -2.6rem; }
+            .timeline-card { padding: 1.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1><a href="index.html">IIML</a></h1>
+<nav>
+    <a href="about.html">About & Director</a>
+    <a href="research.html">Research</a>
+    <a href="activities.html" class="active">Activities</a>
+    <a href="members.html">Members</a>
+    <a href="contact.html">Contact</a>
+</nav>
+    </header>
+
+   <div class="subpage-header">
+        <h2>Activities & News</h2>
+        <p>지능형 인터랙티브 미디어 연구실의 주요 연구 성과 및 소식을 전합니다.</p>
+    </div>
+
+    <!-- 타임라인 영역: 주요 논문 및 랩 소식 -->
+    <section class="timeline-container">
+        <h2 style="text-align: center; margin-bottom: 3rem; font-size: 2rem;">Highlighted Research</h2>
+        <div class="timeline">
+
+            <!-- Item 1 -->
+            <div class="timeline-item">
+                <div class="timeline-date">2026. 10.</div>
+                <div class="timeline-card">
+                    <span class="tag tag-blue">Lab News</span>
+                    <span class="tag tag-purple">Establishment</span>
+                    <h3>지능형 인터랙티브 미디어 연구실(IIML) 개소</h3>
+                    <p>호남대학교 컴퓨터공학과 내에 인공지능 기술과 인간-컴퓨터 상호작용(HCI)을 융합하는 IIML 연구실을 정식으로 설립하였습니다. 차세대 디지털 미디어와 몰입형 컴퓨팅 환경을 중점적으로 연구합니다.</p>
+                </div>
+            </div>
+
+            <!-- Item 2 -->
+            <div class="timeline-item">
+                <div class="timeline-date">2026. 09.</div>
+                <div class="timeline-card">
+                    <span class="tag tag-blue">Journal Publication</span>
+                    <span class="tag tag-gray">KCI</span>
+                    <h3>유도가열 브레이징 접합부의 실시간 품질검사를 위한 멀티센서 융합 엣지 AI 시스템 개발</h3>
+                    <p>스마트미디어저널 (Smart Media Journal) Vol.15, No.9. IR 센서, IR 카메라 및 NIR 카메라를 결합한 멀티센서 융합 엣지 AI 검사 시스템을 통해 실시간 결함 탐지 정확도 96.2%를 달성하고, 데이터 기반 스마트 제조 자율 품질관리의 가능성을 실증했습니다[cite: 15].</p>
+                </div>
+            </div>
+
+            <!-- Item 3 -->
+            <div class="timeline-item">
+                <div class="timeline-date">2026. 04.</div>
+                <div class="timeline-card">
+                    <span class="tag tag-blue">Journal Publication</span>
+                    <span class="tag tag-gray">KCI</span>
+                    <h3>웹 기반 실시간 창작 지원을 위한 아티스트 공정 모방형 다단계 윤곽선 스케치 필터 연구</h3>
+                    <p>정보기술융합공학논문지 (JITAE) Vol.16, No.1. 웹 브라우저의 단일 스레드 제약을 극복하기 위해 Web Worker를 활용한 병렬 처리 전략을 채택하고, 아티스트의 드로잉 공정을 모방한 MTC(Multi-Threshold Contour) 스케치 필터를 제안하여 4K 환경에서 실시간 NPR 성능을 확보했습니다[cite: 35].</p>
+                </div>
+            </div>
+
+            <!-- Item 4 -->
+            <div class="timeline-item">
+                <div class="timeline-date">2025. 12.</div>
+                <div class="timeline-card">
+                    <span class="tag tag-blue">Journal Publication</span>
+                    <span class="tag tag-gray">KCI</span>
+                    <h3>생성형 AI의 문화적 재현과 인종 편향 연구: Midjourney와 DALL-E 3의 '아시아 여성' 재현 양상을 중심으로</h3>
+                    <p>문화산업연구 (Journal of Culture Industry) Vol.25, No.4. 생성형 AI 모델이 '아시아 여성'을 재현하는 방식에 내재된 오리엔탈리즘, 젠더화된 직업 고정관념, 미학적 표준화 등의 시각적 편향성을 정성적·정량적으로 심층 분석하여 문화산업 내 AI 윤리 가이드라인의 필요성을 도출했습니다[cite: 47].</p>
+                </div>
+            </div>
+
+            <!-- Item 5 -->
+            <div class="timeline-item">
+                <div class="timeline-date">2025. 12.</div>
+                <div class="timeline-card">
+                    <span class="tag tag-blue">Journal Publication</span>
+                    <span class="tag tag-gray">KCI</span>
+                    <h3>생성형 AI 기술 발전과 시각 문화 변화 연구: Midjourney와 DALL-E 3을 통한 '아시아 여성' 이미지 재현 분석</h3>
+                    <p>여성문화연구 Vol.19, No.2. AI가 기존 미디어의 젠더 및 인종 편향을 단순히 재생산하는 것을 넘어, 알고리즘을 통해 성적 대상화와 시각적 획일화를 어떻게 시각적으로 구현하고 강화하는지 실증적으로 규명했습니다[cite: 55].</p>
+                </div>
+            </div>
+
+            <!-- Item 6 -->
+            <div class="timeline-item">
+                <div class="timeline-date">2025. 04.</div>
+                <div class="timeline-card">
+                    <span class="tag tag-blue">Journal Publication</span>
+                    <span class="tag tag-gray">KCI</span>
+                    <h3>스마트 축사에서 환경 데이터 변화예측을 위한 Transformer 데이터 분석모델 활용 연구</h3>
+                    <p>정보기술융합공학논문지 (JITAE) Vol.15, No.1. 스마트 축사의 환경 요인 최적화를 위해 최신 딥러닝 아키텍처인 Transformer를 도입하여, 시계열 데이터의 장기 의존성을 반영한 예측 모델을 설계 및 실증했습니다[cite: 45].</p>
+                </div>
+            </div>
+
+            <!-- Item 7 -->
+            <div class="timeline-item">
+                <div class="timeline-date">2023. 04.</div>
+                <div class="timeline-card">
+                    <span class="tag tag-blue">Journal Publication</span>
+                    <span class="tag tag-gray">KCI</span>
+                    <h3>아두이노 창의교육용 교구재 '스마트 재활용 수거기' 개발에 관한 연구</h3>
+                    <p>정보기술융합공학논문지 (JITAE) Vol.13, No.1. 소프트웨어 창의융합교육을 위해 AI 객체 인식(HuskyLens) 및 무게 센서를 결합한 아두이노 기반 스마트 분리수거기 교구재를 개발하고, 모바일 앱 연동 및 사용성 테스트를 통해 교육 효과를 검증했습니다[cite: 23].</p>
+                </div>
+            </div>
+
+            <!-- Item 8 -->
+            <div class="timeline-item">
+                <div class="timeline-date">2023.</div>
+                <div class="timeline-card">
+                    <span class="tag tag-purple">Publication / App</span>
+                    <span class="tag tag-gray">AI-Bigdata</span>
+                    <h3>AI 기반 동물상 제안 애플리케이션 "What's Animal" 개발</h3>
+                    <p>AI 기반 임베딩 벡터를 활용하여 닮은꼴 동물상을 제안하는 시스템을 연구하고, 이를 기반으로 한 실용적인 모바일 애플리케이션을 성공적으로 개발 및 발표하였습니다.</p>
+                </div>
+            </div>
+
+            <!-- Item 9 -->
+            <div class="timeline-item">
+                <div class="timeline-date">2022.</div>
+                <div class="timeline-card">
+                    <span class="tag tag-gold">Award</span>
+                    <span class="tag tag-purple">Publication</span>
+                    <h3>멀티미디어학회 우수논문상 2관왕 수상</h3>
+                    <p>'AI 기반의 객체 인식을 통한 스마트 분리수거함 제안' 및 '디지털트윈 및 IoT를 이용한 스마트축사 환경관리 시스템 개발' 논문으로 학술적 우수성을 인정받아 두 건의 우수논문상을 동시 수상하였습니다.</p>
+                </div>
+            </div>
+
+            <!-- Item 10 -->
+            <div class="timeline-item">
+                <div class="timeline-date">2015 - 2019.</div>
+                <div class="timeline-card">
+                    <span class="tag tag-gray">Research History</span>
+                    <h3>빅데이터 시각화 및 IoT UX 디자인 선행 연구</h3>
+                    <p>빅데이터 시각화 방법론 및 사례 분석, 웹툰 내 3D 그래픽스 적용, IoT 환경에서의 사용자 경험(UX) 디자인 등 미디어와 데이터 융합 분야의 심도 있는 선행 연구를 다수 진행하였습니다.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 그리드 영역: 학회/기관 활동 및 주요 저서 -->
+    <section class="activity-grid">
+        <div class="info-card">
+            <h3>Academic & Institutional Activities</h3>
+            <ul>
+                <li>한국스마트미디어학회 이사</li>
+                <li>한국디지털경영학회 이사</li>
+                <li>아시아디지털디자인학회 정회원</li>
+                <li>아시아문화전당 소프트웨어사업 과업심의위원</li>
+                <li>전남정보문화산업진흥원 지원사업 평가위원</li>
+                <li>광주 3D프린팅 협회 위원</li>
+            </ul>
+        </div>
+
+        <div class="info-card">
+            <h3>Books & Publications</h3>
+            <ul>
+                <li>디지털콘텐츠 비즈니스_개정 (도서출판 청람, 2018)</li>
+                <li>디지털콘텐츠 비즈니스 (도서출판 청람, 2009)</li>
+                <li>3D Modeling (호남대학교 출판부, 2007)</li>
+                <li>Basic Design of Computer Graphics (호남대학교 출판부, 2003)</li>
+            </ul>
+        </div>
+    </section>
+
+    <footer style="text-align: center; padding: 3rem 0; color: rgba(255, 255, 255, 0.3); font-size: 0.9rem; border-top: 1px solid rgba(255,255,255,0.05);">
+        <p>&copy; 2026 Intelligent Interactive Media Lab (IIML). All rights reserved.</p>
+    </footer>
+</body>
+</html>

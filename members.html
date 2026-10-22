@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Members - IIML</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* 기존 스타일 완벽 유지 */
+        body { margin: 0; background: var(--bg-dark); color: var(--text-light); line-height: 1.6; }
+        
+        /* Join Us 모집 공고 배너 스타일 */
+        .join-banner {
+            max-width: 900px;
+            margin: 0 auto 5rem auto;
+            background: linear-gradient(135deg, rgba(79, 70, 229, 0.1), rgba(147, 51, 234, 0.1));
+            border: 1px solid rgba(147, 51, 234, 0.3);
+            border-radius: 16px;
+            padding: 3rem;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        .join-banner h3 { font-size: 2rem; color: #fff; margin-bottom: 1rem; }
+        .join-banner p { color: var(--text-gray); font-size: 1.1rem; line-height: 1.7; margin-bottom: 2rem; }
+        
+        /* --- 새롭게 추가된 Researchers 네임 카드 스타일 --- */
+        .researchers-container {
+            max-width: 900px;
+            margin: 0 auto 5rem auto;
+        }
+        .researchers-grid {
+            display: grid; 
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); 
+            gap: 2rem;
+        }
+        .member-card {
+            background: rgba(255, 255, 255, 0.02); 
+            padding: 2.5rem 2rem; 
+            border-radius: 16px;
+            border: 1px solid rgba(255, 255, 255, 0.05); 
+            text-align: center;
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+        .member-card:hover {
+            transform: translateY(-5px); 
+            border-color: rgba(99, 102, 241, 0.5);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+        .member-img {
+            width: 120px; 
+            height: 120px; 
+            border-radius: 50%; 
+            object-fit: cover;
+            margin: 0 auto 1.5rem auto; 
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            background: rgba(255,255,255,0.05); /* 사진 없을 때 기본 배경 */
+        }
+        .member-card h4 { font-size: 1.3rem; margin: 0 0 0.3rem 0; color: #fff; }
+        .member-card .course { font-size: 0.9rem; color: var(--primary-color); font-weight: 600; margin-bottom: 1rem; }
+        .member-card .interest { font-size: 0.9rem; color: var(--text-gray); line-height: 1.5; }
+
+        /* Alumni 텍스트 리스트 스타일 (기존 완벽 유지) */
+        .alumni-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .alumni-list {
+            list-style: none;
+            padding: 0;
+        }
+        .alumni-list li {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1.5rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            transition: background 0.3s;
+        }
+        .alumni-list li:hover {
+            background: rgba(255, 255, 255, 0.02);
+        }
+        .alumni-name { font-size: 1.2rem; color: #fff; font-weight: bold; width: 150px; }
+        .alumni-degree { color: var(--primary-color); width: 150px; font-weight: 500; }
+        .alumni-info { color: var(--text-gray); flex: 1; text-align: right; }
+
+        @media (max-width: 768px) {
+            .alumni-list li { flex-direction: column; align-items: flex-start; gap: 0.5rem; }
+            .alumni-info { text-align: left; }
+        }
+
+.profile-image {
+  width: 125px;
+  height: 125px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto 28px;
+  border: 2px solid rgba(255,255,255,0.15);
+  background-color: #293553;
+  box-sizing: border-box;
+}
+
+.profile-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1><a href="index.html">IIML</a></h1>
+        <nav>
+            <a href="about.html">About & Director</a>
+            <a href="research.html">Research</a>
+            <a href="activities.html">Activities</a>
+            <a href="members.html" class="active">Members</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <div class="subpage-header">
+        <h2>Members & Alumni</h2>
+        <p>IIML과 함께 차세대 미디어의 미래를 만들어갈 연구원을 기다립니다.</p>
+    </div>
+
+    <section style="padding-top: 2rem;">
+        <!-- 1. 연구원 모집 배너 (기존 유지) -->
+        <div class="join-banner">
+            <h3>We are Hiring!</h3>
+            <p>
+                지능형 인터랙티브 미디어 연구실(IIML)은 현재 새롭게 출범하여<br>
+                열정 가득한 <strong>학부 연구생 및 대학원생</strong>을 적극적으로 모집하고 있습니다.<br>
+                인간과 AI의 상호작용, 몰입형 미디어 환경(VR/AR), 생성형 AI 모델 등<br>
+                가슴 뛰는 미래 기술을 함께 연구할 여러분의 지원을 기다립니다.
+            </p>
+            <a href="contact.html" class="btn">지원 문의하기</a>
+        </div>
+
+
+<!-- 2. Researchers -->
+<div class="researchers-container">
+  <h2 class="section-title"
+      style="font-size:2rem; margin-bottom:2rem; color:#fff; text-align:center;">
+    Researchers
+  </h2>
+
+  <div class="researchers-grid">
+
+    <!-- 연구원 1 -->
+    <div class="member-card">
+      <div class="profile-image">
+        <img src="images/male_01.png" alt="김준서 프로필">
+      </div>
+      <h4>김준서</h4>
+      <div class="course">학부연구생 (Undergrad)</div>
+      <div class="interest">
+        Computer Vision<br>Edge AI Systems
+      </div>
+    </div>
+
+    <!-- 연구원 2 -->
+    <div class="member-card">
+      <div class="profile-image">
+        <img src="images/female_01.png" alt="이가현 프로필">
+      </div>
+      <h4>이가현</h4>
+      <div class="course">학부연구생 (Undergrad)</div>
+      <div class="interest">
+        Interactive Web Media<br>UI/UX Design
+      </div>
+    </div>
+
+    <!-- 연구원 3 -->
+    <div class="member-card">
+      <div class="profile-image">
+        <img src="images/female_02.png" alt="이수진 프로필">
+      </div>
+      <h4>이수진</h4>
+      <div class="course">학부연구생 (Undergrad)</div>
+      <div class="interest">
+        VR/XR Applications<br>Game Programming
+      </div>
+    </div>
+
+    <!-- 연구원 4 -->
+    <div class="member-card">
+      <div class="profile-image">
+        <img src="images/male_02.png" alt="고현준 프로필">
+      </div>
+      <h4>고현준</h4>
+      <div class="course">학부연구생 (Undergrad)</div>
+      <div class="interest">
+        VR/XR Applications<br>Game Programming
+      </div>
+    </div>
+
+    <!-- 연구원 5 -->
+    <div class="member-card">
+      <div class="profile-image"></div>
+      <h4>ooo</h4>
+      <div class="course">학부연구생 (Undergrad)</div>
+      <div class="interest">
+        Interactive Web Media<br>UI/UX Design
+      </div>
+    </div>
+
+    <!-- 연구원 6 -->
+    <div class="member-card">
+      <div class="profile-image"></div>
+      <h4>ooo</h4>
+      <div class="course">학부연구생 (Undergrad)</div>
+      <div class="interest">
+        Computer Vision<br>Edge AI Systems
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+        <!-- 3. 졸업생(Alumni) 리스트 (기존 완벽 유지) -->
+        <div class="alumni-container">
+            <h2 class="section-title" style="font-size: 2rem; margin-bottom: 2rem; color: #fff;">Alumni</h2>
+            <ul class="alumni-list">
+                <li>
+                    <span class="alumni-name">최  훈</span>
+                    <span class="alumni-degree">B.S. (2025)</span>
+                    <span class="alumni-info">現 다음정보주식회사</span>
+                </li>
+                <li>
+                    <span class="alumni-name">정석인</span>
+                    <span class="alumni-degree">B.S. (2025)</span>
+                    <span class="alumni-info">現 가민정보시스템_웹프로그래머</span>
+                </li>
+                <li>
+                    <span class="alumni-name">하정수</span>
+                    <span class="alumni-degree">B.S. (2025)</span>
+                    <span class="alumni-info">現 이룸아이씨티_개발</span>
+                </li>
+                <li>
+                    <span class="alumni-name">김우민</span>
+                    <span class="alumni-degree">B.S. (2024)</span>
+                    <span class="alumni-info">現 시큐아이(삼성전자DS)_엔지니어</span>
+                </li>
+               <li>
+                    <span class="alumni-name">여현정</span>
+                    <span class="alumni-degree">B.S. (2024)</span>
+                    <span class="alumni-info">現 디포커스_ERP시스템 엔지니어</span>
+                </li>
+                <li>
+                    <span class="alumni-name">임재원</span>
+                    <span class="alumni-degree">B.S. (2022)</span>
+                    <span class="alumni-info">現 일본 IT기업</span>
+                </li>
+                <li>
+                    <span class="alumni-name">여진구</span>
+                    <span class="alumni-degree">B.S. (2010)</span>
+                    <span class="alumni-info">現 진구네영상제작소_대표(웹디자인/모션그래픽)</span>
+                </li>
+                <li>
+                    <span class="alumni-name">김단</span>
+                    <span class="alumni-degree">B.S. (2010)</span>
+                    <span class="alumni-info">現 상단스튜디오_대표(3D 애니메이션)</span>
+                </li>
+                <li>
+                    <span class="alumni-name">박중현</span>
+                    <span class="alumni-degree">B.S. (2010)</span>
+                    <span class="alumni-info">現 게임 그래픽 디자이너</span>
+                </li>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Intelligent Interactive Media Lab (IIML). All rights reserved.</p>
+    </footer>
+</body>
+</html>
