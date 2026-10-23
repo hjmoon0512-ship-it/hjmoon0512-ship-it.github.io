@@ -45,6 +45,8 @@ footer { text-align: center; padding: 3rem; color: var(--text-gray); font-size: 
   color: #fff;
   font-size: 28px;
   cursor: pointer;
+  pointer-events: auto !important; /* 터치 이벤트 확실히 보장 */
+  z-index: 1001;
 }
 
 @media screen and (max-width: 768px) {
