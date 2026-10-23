@@ -28,33 +28,39 @@
         <p>연구실 위치 안내 및 학생 모집 공고</p>
     </div>
 
-    <section>
-        <div style="background: var(--bg-card); padding: 4rem; border-radius: 16px; text-align: center; max-width: 900px; margin: 0 auto; border: 1px solid rgba(255, 255, 255, 0.05);">
-            <div style="height: 550px; margin-bottom: 3rem; border-radius: 12px; overflow: hidden;">
-    <img src="images/contact_collage.png" alt="IIML 연구실 및 호남대학교 전경" style="width: 100%; height: 100%; object-fit: cover;">
-</div>
+    <section style="padding: 2rem 5%;">
+        <!-- 메인 카드 박스에서 text-align: center 제거 -->
+        <div style="background: var(--bg-card); padding: 2rem 1.5rem; border-radius: 16px; max-width: 900px; margin: 0 auto; border: 1px solid rgba(255, 255, 255, 0.05); box-sizing: border-box;">
             
-            <div style="display: flex; flex-wrap: wrap; gap: 3rem; justify-content: space-around; text-align: left;">
+            <!-- 이미지는 가운데 정렬 유지 -->
+            <div class="contact-img-box" style="margin-bottom: 2rem; border-radius: 12px; overflow: hidden; text-align: center;">
+                <img src="images/contact_collage.png" alt="IIML 연구실 및 호남대학교 전경" style="width: 100%; height: auto; max-height: 350px; object-fit: cover; display: block;">
+            </div>
+            
+            <!-- 텍스트 영역: 명시적으로 왼쪽 정렬 적용 -->
+            <div style="display: flex; flex-wrap: wrap; gap: 2rem; justify-content: space-between; text-align: left;">
+                
                 <!-- Location Info -->
-                <div style="flex: 1; min-width: 300px;">
-                    <h3 style="font-size: 1.8rem; margin-bottom: 1rem; color: #fff;">Location</h3>
-                    <p style="color: var(--text-gray); margin-bottom: 0.5rem; font-size: 1.1rem;">호남대학교 컴퓨터공학과</p>
-                    <p style="color: var(--text-gray); margin-bottom: 0.5rem; font-size: 1.1rem;">지능형 인터랙티브 미디어 연구실 (IIML)</p>
-                    <p style="color: var(--text-light); margin-bottom: 2rem; font-size: 1.2rem; margin-top: 1rem;">
+                <div style="flex: 1; min-width: 260px;">
+                    <h3 style="font-size: 1.5rem; margin-bottom: 0.8rem; color: #fff; text-align: left;">Location</h3>
+                    <p style="color: var(--text-gray); margin-bottom: 0.4rem; font-size: 1rem; text-align: left;">호남대학교 컴퓨터공학과</p>
+                    <p style="color: var(--text-gray); margin-bottom: 0.4rem; font-size: 1rem; text-align: left;">지능형 인터랙티브 미디어 연구실 (IIML)</p>
+                    <p style="color: var(--text-light); margin-bottom: 1.5rem; font-size: 1.1rem; margin-top: 0.8rem; text-align: left;">
                         <strong>Room:</strong> 8504호 (8518-2)
                     </p>
                 </div>
                 
                 <!-- Join Us Info -->
-                <div style="flex: 1; min-width: 300px;">
-                    <h3 style="font-size: 1.8rem; margin-bottom: 1rem; color: var(--primary-color);">Join Us</h3>
-                    <p style="color: var(--text-gray); line-height: 1.6; font-size: 1.05rem;">
+                <div style="flex: 1; min-width: 260px;">
+                    <h3 style="font-size: 1.5rem; margin-bottom: 0.8rem; color: var(--primary-color); text-align: left;">Join Us</h3>
+                    <p style="color: var(--text-gray); line-height: 1.6; font-size: 0.95rem; text-align: left;">
                         HCI, AI 융합 미디어, VR/AR 분야에 관심 있고 열정적으로 연구에 참여할 <strong>학부 연구생 및 대학원생</strong>을 상시 모집하고 있습니다.
                     </p>
-                    <p style="color: var(--text-gray); line-height: 1.6; font-size: 1.05rem; margin-top: 1rem;">
+                    <p style="color: var(--text-gray); line-height: 1.6; font-size: 0.95rem; margin-top: 0.8rem; text-align: left;">
                         상담 및 지원을 원하시는 학생은 언제든지 연구실로 방문하시거나 이메일로 연락 바랍니다.
                     </p>
                 </div>
+                
             </div>
         </div>
     </section>
@@ -72,7 +78,5 @@
             });
         }
     </script>
-</body>
-</html>
 </body>
 </html>
