@@ -54,20 +54,16 @@
 </head>
 <body>
 
-<header>
-    <h1><a href="index.html">IIML</a></h1>
-    <!-- 📱 모바일 햄버거 버튼 추가 -->
-    <button class="menu-toggle" id="menuToggle" aria-label="메뉴 열기">☰</button>
-
-    <!-- 🧭 id="navLinks" 추가 -->
-    <nav id="navLinks">
-        <a href="about.html">About & Director</a>
-        <a href="research.html">Research</a>
-        <a href="activities.html">Activities</a>
-        <a href="members.html">Members</a>
-        <a href="contact.html">Contact</a>
-    </nav>
-</header>
+    <header>
+        <h1><a href="index.html">IIML</a></h1>
+<nav>
+    <a href="about.html">About & Director</a>
+    <a href="research.html">Research</a>
+    <a href="activities.html" class="active">Activities</a>
+    <a href="members.html">Members</a>
+    <a href="contact.html">Contact</a>
+</nav>
+    </header>
 
    <div class="subpage-header">
         <h2>Activities & News</h2>
@@ -219,17 +215,5 @@
     <footer style="text-align: center; padding: 3rem 0; color: rgba(255, 255, 255, 0.3); font-size: 0.9rem; border-top: 1px solid rgba(255,255,255,0.05);">
         <p>&copy; 2026 Intelligent Interactive Media Lab (IIML). All rights reserved.</p>
     </footer>
-    <script>
-        const toggleBtn = document.getElementById('menuToggle');
-        const navLinks = document.getElementById('navLinks');
-
-        if (toggleBtn && navLinks) {
-            toggleBtn.addEventListener('click', () => {
-                navLinks.classList.toggle('active');
-            });
-        }
-    </script>
-</body>
-</html>
 </body>
 </html>
